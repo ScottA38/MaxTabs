@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "MaxTabs",
+  "version": "1.0",
+
+  "description": "Restricts all browser windows to a certain number of maximum tabs at one time. Chances are if you have more than 10 tabs you are spread across purposes and should reorganise",
+
+  "icons": {
+    "48": "icons/MaxTabs-48.png"
+  },
+
+  "background": {
+    "scripts": ["MaxTabs.js"]
+  },
+
+  "permissions": [
+    "notifications",
+    "theme"
+  ]
+}
