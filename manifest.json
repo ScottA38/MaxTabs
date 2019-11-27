@@ -13,8 +13,18 @@
     "scripts": ["MaxTabs.js"]
   },
 
+  "commands": {
+    "duplicate-tab": {
+      "suggested_key": {
+        "default": "Command+MacCtrl+T",
+        "windows": "Ctrl+Alt+T"
+      },
+      "description": "Duplicate the user's current tab"
+    }
+  },
+
   "permissions": [
-    "notifications",
-    "theme"
+    "theme",
+    "tabs"
   ]
 }

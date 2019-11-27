@@ -19,6 +19,19 @@ let alertTheme = {
   }
 }
 
+//sneak a duplicate tab keybinding in here
+browser.commands.onCommand.addListener(function(command) {
+  if (command === "duplicate-tab") {
+    let thisTab = browser.tabs.query({active: true, lastFocusedWindow: true}, )
+    thisTab.then(function(tabInfo) {
+      browser.tabs.duplicate(tabInfo[0].id)
+    })
+    .catch(function(err) {
+      console.log("Error occurred trying to duplicate tab:\n", err)
+    })
+  }
+})
+
 browser.tabs.onCreated.addListener(function (newTab) {
   console.log("new tab created!", newTab)
 
